@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face-Off Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── LANDING ───────────────────────────── -->
+  <section id="landing">
+    <p class="landing-wordmark">Face-Off</p>
+
+    <h1 class="landing-headline">
+      Pick the<br><span>winner.</span>
+    </h1>
+
+    <p class="landing-sub">
+      Two things go head-to-head. Which is taller, older, heavier, faster?
+      Pick right and keep your streak alive.
+    </p>
+
+    <div class="categories" id="categories">
+      <button class="cat-chip active" data-cat="mixed">Random Mix</button>
+      <button class="cat-chip" data-cat="history">History</button>
+      <button class="cat-chip" data-cat="geography">Geography</button>
+      <button class="cat-chip" data-cat="nature">Nature</button>
+      <button class="cat-chip" data-cat="science">Science</button>
+      <button class="cat-chip" data-cat="pop-culture">Pop Culture</button>
+    </div>
+
+    <button class="start-btn" id="startBtn">Start playing</button>
+
+    <div class="best-score-display" id="bestDisplay"></div>
+  </section>
+
+  <!-- ── GAME ──────────────────────────────── -->
+  <section id="game">
+
+    <div class="score-bar">
+      <div class="score-item">
+        <span class="score-label">Score</span>
+        <span class="score-value" id="scoreValue">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">Question</span>
+        <span class="score-value" id="questionNum">1</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">Streak</span>
+        <span class="score-value" id="streakValue">0</span>
+      </div>
+    </div>
+
+    <div class="question-text" id="questionText">Which is taller?</div>
+
+    <div class="arena" id="arena">
+      <button class="face-card" id="cardA" disabled>
+        <span class="face-name" id="nameA"></span>
+        <span class="face-value hidden" id="valueA"></span>
+      </button>
+
+      <div class="vs-badge">VS</div>
+
+      <button class="face-card" id="cardB" disabled>
+        <span class="face-name" id="nameB"></span>
+        <span class="face-value hidden" id="valueB"></span>
+      </button>
+    </div>
+
+    <div class="result-area hidden" id="resultArea">
+      <p class="result-text" id="resultText"></p>
+      <p class="fun-fact" id="funFact"></p>
+      <button class="next-btn" id="nextBtn">Next question</button>
+    </div>
+
+    <div class="loader hidden" id="loader">
+      <div class="spinner"></div>
+      Loading questions...
+    </div>
+
+    <button class="quit-btn" id="quitBtn">Quit</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
