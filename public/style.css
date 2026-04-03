@@ -36,7 +36,7 @@ html {
 
 #game { display: none; }
 #game.active { display: flex; flex-direction: column; align-items: center; min-height: 100dvh; padding: 0 16px 40px; }
-#game.active ~ #landing { display: none; }
+#landing.hidden { display: none; }
 
 .landing-wordmark {
   font-size: 13px;

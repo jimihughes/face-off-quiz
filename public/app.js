@@ -72,12 +72,14 @@ function startGame() {
   state.revealed = false;
 
   updateScoreUI();
+  landing.classList.add('hidden');
   game.classList.add('active');
   fetchQuestions();
 }
 
 function quitGame() {
   game.classList.remove('active');
+  landing.classList.remove('hidden');
   saveStats();
   showBestScore();
 }
